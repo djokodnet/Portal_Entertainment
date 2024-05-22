@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saktimobile.portalentertainment.portalentertainment">
+
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+        <application
+            android:name=".MyApplication"
+            android:supportsRtl="true"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Portal Entertainment"
+            android:theme="@style/AppTheme" >
+            <activity
+                android:name=".landingpage"
+                android:label="Portal Entertainment" >
+
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+
+            <!-- Main activity -->
+            <activity
+                android:name=".MainActivity"
+                android:label= "Portal Entertainment" >
+            </activity>
+
+
+            <activity
+                android:name=".errorconnection"
+                android:label= "Portal Entertainment" >
+            </activity>
+
+            <receiver
+                android:name=".ConnectivityReceiver"
+                android:enabled="true">
+                <intent-filter>
+                    <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                </intent-filter>
+            </receiver>
+        </application>
+
+</manifest>
